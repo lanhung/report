@@ -1,9 +1,29 @@
 # 容器部署性能对比分析报告
 
+  
+
+
+
 ## 1. 测试环境概述
 - **单物理机部署**：1、3、5个容器
 - **分布式双物理机部署**：3、5个容器
-- **测试指标**：客户端数、正常返回次数、最小延迟时间、延迟时间分布
+- **测试指标**：客户端数、正常返回次数、最小延迟时间、延迟时间分布  
+- 网络环境：局域网  
+- 单机版电脑配置
+- 电脑配置：cpu i7 12700kf 32g rtx3080   
+- 分布式电脑配置  
+- cpu i7 12700kf 32g rtx3080两台部署xiaozhi-server  
+- cpu i7 13620H 32g 部署mysql、redis、web、nginx
+
+| node1 | node2             | node3             |
+|-------|-------------------|-------------------|
+| mysql、redis、web、nginx | xiaozhi-server *1 | xiaozhi-server *2 |
+
+
+| node1 | node2             | node3             |
+|-------|-------------------|-------------------|
+| mysql、redis、web、nginx      | xiaozhi-server *2 | xiaozhi-server *3 |
+
 
 ---
 
